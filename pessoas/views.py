@@ -1,7 +1,4 @@
-"""
-@guilherme garcia silva
-@guilhermesilva5
-"""
+
 
 from django.shortcuts import render, HttpResponseRedirect
 from django.db.models import Q #Queries complexas
@@ -53,7 +50,7 @@ def pessoaPesquisar(request):
                     (Q(nome__contains=textoBusca) |  
                     Q(email__contains=textoBusca) | 
                     Q(telefone__contains=textoBusca) | 
-                    Q(logradouro__contains=textoBusca))).order_by('-nome')  #BUSCA POR NOME OU EMAIL OU TELEFONE OU LOGRADOURO... E É ORDENADO POR NOME.
+                    Q(logradouro__contains=textoBusca))).order_by('-nome')  #BUSCA POR NOME OU EMAIL OU TELEFONE OU LOGRADOURO... EORDENADO POR NOME.
         except:
             pessoas = []
 
@@ -74,12 +71,3 @@ def pessoaExcluir(request, pk=0):
         return HttpResponseRedirect('/pessoas/')
     except:
         return HttpResponseRedirect('/pessoas/')
-
-
-
-
-    
-
-
-
-
