@@ -1,6 +1,6 @@
 """
-@guilherme garcia silva
-@guilhermesilva5
+@Caique Sampaio Silveira
+@Caique Sampaio
 """
 
 from django.conf.urls import patterns, include, url
